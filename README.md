@@ -1,6 +1,8 @@
 # CrawlerPython
 
-установка 
+`Python 3.6.8`
+
+установка Scrapy
 `python3 -m pip install Scrapy`
 
 **Scrapy 1.8.0**
