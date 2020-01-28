@@ -13,13 +13,16 @@ class KolesaSpider(CrawlSpider):
         Rule(LinkExtractor(allow=('.+kolesa.kz/a/show.+'), deny=('.+kolesa.kz/cars/.+')), callback='parse_page'),   # TODO: вот тут надо подумать
         #Rule( callback='parse_page'),
     )
-    start_urls = ['https://kolesa.kz/cars/']
+    #start_urls = ['https://kolesa.kz/cars/']
     
     def __init__(self, *a, **kw):
         super(KolesaSpider, self).__init__(*a, **kw)
         urls = []
-        for i in range(99399988,99399999):
+
+        for i in range(101697810,101697815):
+            
             url = 'https://kolesa.kz/a/show/' + str(i)
+            
             if i%1000==0:
                 print(i)
             try:
@@ -27,6 +30,8 @@ class KolesaSpider(CrawlSpider):
                 print(url)
                 urls.append(url)
             except:
+                print(url)
+                print('not found')
                 pass
         self.start_urls = urls
 
