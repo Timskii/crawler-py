@@ -19,7 +19,7 @@ class KolesaSpider(CrawlSpider):
         super(KolesaSpider, self).__init__(*a, **kw)
         urls = []
 
-        for i in range(101697810,101697815):
+        for i in range(101697811,101697814):
             
             url = 'https://kolesa.kz/a/show/' + str(i)
             
