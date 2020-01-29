@@ -19,7 +19,7 @@ class KolesaSpider(CrawlSpider):
         super(KolesaSpider, self).__init__(*a, **kw)
         urls = []
 
-        for i in range(101697811,101697814):
+        for i in range(131,10000):
             
             url = 'https://kolesa.kz/a/show/' + str(i)
             
@@ -29,7 +29,8 @@ class KolesaSpider(CrawlSpider):
                 f = urllib.request.urlopen(url)
                 print(url)
                 urls.append(url)
-            except:
+            except Exception as e:
+                print(e)
                 print(url)
                 print('not found')
                 pass

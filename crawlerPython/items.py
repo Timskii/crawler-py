@@ -26,4 +26,5 @@ class KolesaItem(scrapy.Item):
     driveUnit = scrapy.Field()	#привод
     disinhibited = scrapy.Field() #расторможен
     comments = scrapy.Field() #коментарии
+    _id = ""
 

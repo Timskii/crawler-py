@@ -1,1 +1,4 @@
 hdfs==2.5.8
+py-postgresql==1.2.1
+Scrapy==1.8.0
+pymongo==3.9.0
