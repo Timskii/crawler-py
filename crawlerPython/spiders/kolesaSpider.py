@@ -4,6 +4,7 @@ from scrapy.linkextractors import LinkExtractor
 from crawlerPython.items import KolesaItem
 import urllib.request
 import json
+from crawlerPython.mongo import db
 
 
 class KolesaSpider(CrawlSpider):
@@ -17,24 +18,8 @@ class KolesaSpider(CrawlSpider):
     
     def __init__(self, *a, **kw):
         super(KolesaSpider, self).__init__(*a, **kw)
-        urls = []
-
-        for i in range(131,10000):
-            
-            url = 'https://kolesa.kz/a/show/' + str(i)
-            
-            if i%1000==0:
-                print(i)
-            try:
-                f = urllib.request.urlopen(url)
-                print(url)
-                urls.append(url)
-            except Exception as e:
-                print(e)
-                print(url)
-                print('not found')
-                pass
-        self.start_urls = urls
+        for doc in db.urls.find({"isProccessed" : False}, {"url":1}):
+            self.start_urls.append(doc['url'])
 
 
     def checkelement(self, lst):
