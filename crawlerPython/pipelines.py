@@ -13,20 +13,8 @@ from crawlerPython.mongo import db
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 
 
-class JsonWriterPipeline(object):
-
-#    def __init__(self):
-#        connection = pymongo.MongoClient(
-#            host= '192.168.1.208',
-#            port= 27017,
-#            username= 'u',
-#            password= 'u123',
-#            authSource= 'crawlers'
-#        )
-#        db = connection.crawlers
-        
-
-
+class KolesaPipeline(object):
+    
     def process_item(self, item, spider):
 
         collection = db.kolesa

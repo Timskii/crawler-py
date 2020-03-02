@@ -2,10 +2,8 @@
 
 `Python 3.6.8`
 
-установка Scrapy
-`python3 -m pip install Scrapy`
-
-**Scrapy 1.8.0**
+установка зависимостей 
+`pip install -r requirements.txt`
 
 проект сгенерирован командой 
 `scrapy startproject crawlerPython`
