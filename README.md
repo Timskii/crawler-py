@@ -1,6 +1,12 @@
 # CrawlerPython
 
-`Python 3.6.8`
+`Python 3.8`
+
+создание виртуальной среды 
+`python3.8 -m venv env`
+
+активация (unix или mac)
+`source env/bin/activate`
 
 установка зависимостей 
 `pip install -r requirements.txt`
